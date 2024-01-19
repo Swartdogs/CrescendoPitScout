@@ -68,7 +68,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="C:\Users\Student\Desktop\Scouting Apps\Charged Up Scouting\Charged Up Pit Scouting\app\src\main\res\drawable\chargeduplogo.jpg" />
+                                                <entry key="imagePath" value="C:\Users\Student\Desktop\Scouting Apps\Charged Up Scouting" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -92,7 +92,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Student\Desktop\Scouting Apps\Charged Up Scouting\Charged Up Pit Scouting\app\src\main\res\drawable\chargeduplogo.jpg" />
+                                                <entry key="imagePath" value="C:\Users\Student\Pictures\apriltagpic.png" />
                                                 <entry key="scalingPercent" value="72" />
                                               </map>
                                             </option>
@@ -125,10 +125,8 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundLayerName" value="piticon_background" />
-                                      <entry key="foregroundLayerName" value="piticon_foreground" />
                                       <entry key="legacyIconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="PitIcon" />
+                                      <entry key="outputName" value="apriltag" />
                                       <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
@@ -249,6 +247,17 @@
                                 <PersistentState>
                                   <option name="children">
                                     <map>
+                                      <entry key="backgroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="imagePath" value="C:\Users\Student\Pictures\apriltagpic.png" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                       <entry key="foregroundClipArt">
                                         <value>
                                           <PersistentState>
@@ -266,6 +275,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\Student\Pictures\apriltagpic.png" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -297,12 +307,18 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="outputName" value="april_tags" />
                                       <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
                                 </PersistentState>
                               </value>
                             </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="outputIconType" value="TV_CHANNEL" />
                           </map>
                         </option>
                       </PersistentState>
