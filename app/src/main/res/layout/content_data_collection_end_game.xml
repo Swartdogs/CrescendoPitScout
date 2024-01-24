@@ -10,33 +10,112 @@
     tools:showIn="@layout/activity_data_collection_end_game">
 
     <TextView
+        android:id="@+id/End_PictureReminder_TB"
+        android:layout_width="485dp"
+        android:layout_height="83dp"
+        android:fontFamily="@font/bolt_regular"
+        android:text="Take picture of robot"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.736" />
+
+    <RadioGroup
+        android:id="@+id/End_ConsistentHang_RG"
+        android:layout_width="660dp"
+        android:layout_height="67dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.168">
+
+        <RadioButton
+            android:id="@+id/End_HumanPlayerPreferenceYes_RB"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:text="Yes"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/End_HumanPlayerPreferenceNo_RB"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:text="No"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.645"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/End_HumanPlayerPreference_RG"
+        android:layout_width="660dp"
+        android:layout_height="73dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502">
+
+        <RadioButton
+            android:id="@+id/End_ConsistentHangYes_RB"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:text="Yes"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.169" />
+
+        <RadioButton
+            android:id="@+id/End_ConsistentHangNo_RB"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:text="No"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.611"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.168" />
+
+    </RadioGroup>
+
+    <TextView
         android:id="@+id/TeleEnd_Endgame_TV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bolt_regular"
         android:text="Endgame"
         android:textColor="#000000"
-        android:textSize="48sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58" />
-
-    <TextView
-        android:id="@+id/TeleEnd_Teleop_TV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bolt_regular"
-        android:text="Teleop"
-        android:textColor="#000"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <Button
         android:id="@+id/To_Submission_B"
@@ -53,226 +132,90 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.954" />
 
-    <CheckBox
-        android:id="@+id/TeleEnd_Defence_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you play defense?"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
-
     <TextView
-        android:id="@+id/TeleEnd_WhereCubes_TV"
-        android:layout_width="246dp"
-        android:layout_height="148dp"
+        android:id="@+id/End_HangConsistence_TB"
+        android:layout_width="670dp"
+        android:layout_height="51dp"
         android:fontFamily="@font/bolt_regular"
-        android:text="Where can you score cubes?"
+        android:text="Can you hang consistently?"
         android:textColor="#000"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.204"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <CheckBox
-        android:id="@+id/TeleEnd_TopCubes_CB"
+        android:id="@+id/End_SoloHang_CB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Top"
+        android:enabled="true"
+        android:text="Solo"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintVertical_bias="0.228" />
 
     <CheckBox
-        android:id="@+id/TeleEnd_BottomCubes_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bottom"
+        android:id="@+id/End_HumanPlayerSource_CB"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:enabled="true"
+        android:text="Source"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.372" />
+        app:layout_constraintVertical_bias="0.603" />
 
     <CheckBox
-        android:id="@+id/TeleEnd_MiddleCubes_CB"
+        android:id="@+id/End_HarmonyHang_CB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Middle"
+        android:enabled="true"
+        android:text="Harmony"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintVertical_bias="0.278" />
 
     <TextView
-        android:id="@+id/TeleEnd_WhereCones_TV"
-        android:layout_width="234dp"
-        android:layout_height="147dp"
+        android:id="@+id/End_HumanPlayerPreference_TB"
+        android:layout_width="676dp"
+        android:layout_height="117dp"
         android:fontFamily="@font/bolt_regular"
-        android:text="Where can  you score cones?"
+        android:text="Do you have a preference on where your human player is?"
         android:textColor="#000"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.786"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151" />
+        app:layout_constraintVertical_bias="0.418" />
 
     <CheckBox
-        android:id="@+id/TeleEnd_TopCones_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Top"
+        android:id="@+id/End_HumanPlayerAmp_CB"
+        android:layout_width="159dp"
+        android:layout_height="55dp"
+        android:enabled="true"
+        android:text="Amp"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintVertical_bias="0.554" />
 
-    <CheckBox
-        android:id="@+id/TeleEnd_MiddleCones_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Middle"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.702"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
-
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="251dp"
-        android:layout_height="352dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
-
-    <View
-        android:id="@+id/divider7"
-        android:layout_width="229dp"
-        android:layout_height="249dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
-
-    <CheckBox
-        android:id="@+id/TeleEnd_Dock_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dock"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
-
-    <CheckBox
-        android:id="@+id/TeleEnd_Park_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Park"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.804" />
-
-    <TextView
-        android:id="@+id/teleEnd_Endgame_TV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bolt_regular"
-        android:text="Can you:"
-        android:textColor="#000000"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.652" />
-
-    <CheckBox
-        android:id="@+id/TeleEnd_Engage_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Engage"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
-
-    <CheckBox
-        android:id="@+id/TeleEnd_BottomCones_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bottom"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.716"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="600dp"
-        android:layout_height="8dp"
-        android:background="#3E3A38"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533" />
-
-    <View
-        android:id="@+id/divider4"
-        android:layout_width="251dp"
-        android:layout_height="352dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.183" />
 
 </android.support.constraint.ConstraintLayout>

@@ -6,25 +6,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 
 public class data_Collection_sandstorm extends AppCompatActivity {
 
     //Defines variables for use
-    public static String AutoEngage = "False";
-    public static String AutoDock = "False";
-    public static String AutoMobility = "False";
-    public static String AutoTop = "False";
-    public static String AutoMiddle = "False";
-    public static String AutoBottom = "False";
-    public static String AutoCones0 = "False";
-    public static String AutoCones1 = "False";
-    public static String AutoCones2 = "False";
-    public static String AutoCones3 = "False";
-    public static String AutoCubes0 = "False";
-    public static String AutoCubes1 = "False";
-    public static String AutoCubes2 = "False";
-    public static String AutoCubes3 = "False";
-    public static String AutoColorReliance = "False";
+    public static String AutoStartNoteYes = "False";
+    public static String AutoStartNoteNo = "False";
+    public static String AutoScoreSpeaker = "False";
+    public static String AutoScoreAmp = "False";
+    public static String TeleopScoreSpeaker = "False";
+    public static String TeleopScoreAmp = "False";
+    public static String TeleopCoopertitionYes = "False";
+
+    public static String TeleopCoopertitionNo = "False";
+
+    public static String TeleopAmpStratNo = "False";
+    public static String TeleopAmpStratYes = "False";
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +33,19 @@ public class data_Collection_sandstorm extends AppCompatActivity {
         setContentView(R.layout.activity_data__collection_sandstorm);
 
         //Defines all checkboxes for positions
-        final CheckBox AutoCubes0CB = (CheckBox) findViewById(R.id.Auto_Cubes0_CB);
-        final CheckBox AutoCones0CB = (CheckBox) findViewById(R.id.Auto_Cones0_CB);
-        final CheckBox AutoMobilityCB = (CheckBox) findViewById(R.id.Auto_Mobility_CB);
-        final CheckBox AutoTopCB = (CheckBox) findViewById(R.id.Auto_Top_CB);
-        final CheckBox AutoMiddleCB = (CheckBox) findViewById(R.id.Auto_Middle_CB);
-        final CheckBox AutoBottomCB = (CheckBox) findViewById(R.id.Auto_Bottom_CB);
-        final CheckBox AutoCones1CB = (CheckBox) findViewById(R.id.Auto_Cones1_CB);
-        final CheckBox AutoCones2CB = (CheckBox) findViewById(R.id.Auto_Cones2_CB);
-        final CheckBox AutoCones3CB = (CheckBox) findViewById(R.id.Auto_Cones3_CB);
-        final CheckBox AutoCubes1CB = (CheckBox) findViewById(R.id.Auto_Cubes1_CB);
-        final CheckBox AutoCubes2CB = (CheckBox) findViewById(R.id.Auto_Cubes2_CB);
-        final CheckBox AutoCubes3CB = (CheckBox) findViewById(R.id.Auto_Cubes3_CB);
-        final CheckBox AutoDockCB = (CheckBox) findViewById(R.id.Auto_Dock_CB);
-        final CheckBox AutoEngageCB = (CheckBox) findViewById(R.id.Auto_Engage_CB);
-        final CheckBox AutoColorRelianceCB = (CheckBox) findViewById(R.id.Auto_ColorReliance_CB);
+        final CheckBox AutoScoreSpeakerCB = (CheckBox) findViewById(R.id.auto_ScoreSpeaker_CB);
+        final CheckBox AutoScoreAmpCB = (CheckBox) findViewById(R.id.auto_ScoreAmp_CB);
+        final CheckBox TeleopScoreSpeakerCB = (CheckBox) findViewById(R.id.teleop_ScoreSpeaker_CB);
+        final CheckBox TeleopScoreAmpCB = (CheckBox) findViewById(R.id.teleop_ScoreAmp_CB);
+
+        //Defines all radioboxes for positions
+        final RadioButton AutoStartNoteYesRB = (RadioButton) findViewById(R.id.Auto_StartNoteYes_RB);
+        final RadioButton AutoStartNoteNoRB = (RadioButton) findViewById(R.id.Auto_StartNoteNo_RB);
+        final RadioButton TeleopCoopertitionYesRB = (RadioButton) findViewById(R.id.teleop_CoopertitionYes_RB);
+        final RadioButton TeleopCoopertitionNoRB = (RadioButton) findViewById(R.id.teleop_CoopertitionNo_RB);
+        final RadioButton TeleopAmpStratYesRB = (RadioButton) findViewById(R.id.teleop_AmpStratYes_RB);
+        final RadioButton TeleopAmpStratNoRB = (RadioButton) findViewById(R.id.teleop_AmpStratNo_RB);
+
 
         //Defines and implements Button to continue along with variable savings
         final Button To_EndGame_B = (Button) findViewById(R.id.To_EndGame_B);
@@ -57,51 +56,38 @@ public class data_Collection_sandstorm extends AppCompatActivity {
             public void onClick(View v) {
 
                 /*add in data collection pieces from checkboxes*/
-                if (AutoDockCB.isChecked()) {
-                    AutoDock = "True";
+                if (AutoScoreSpeakerCB.isChecked()) {
+                    AutoScoreSpeaker = "True";
                 }
-                if (AutoEngageCB.isChecked()) {
-                    AutoEngage = "True";
+                if (AutoScoreAmpCB.isChecked()) {
+                    AutoScoreAmp = "True";
                 }
-                if (AutoMobilityCB.isChecked()) {
-                    AutoMobility = "True";
+                if (TeleopScoreSpeakerCB.isChecked()) {
+                    TeleopScoreSpeaker = "True";
                 }
-                if (AutoTopCB.isChecked()) {
-                    AutoTop = "True";
+                if (TeleopScoreAmpCB.isChecked()) {
+                    TeleopScoreAmp = "True";
                 }
-                if (AutoMiddleCB.isChecked()) {
-                    AutoMiddle = "True";
+                //add in data collection pieces from radio buttons
+                if (AutoStartNoteYesRB.isChecked()) {
+                    AutoStartNoteYes = "True";
                 }
-                if (AutoBottomCB.isChecked()) {
-                    AutoBottom = "True";
+                if (AutoStartNoteNoRB.isChecked()) {
+                    AutoStartNoteNo = "True";
                 }
-                if (AutoCubes0CB.isChecked()) {
-                    AutoCubes0 = "True";
+                if (TeleopCoopertitionYesRB.isChecked()) {
+                    TeleopCoopertitionYes = "True";
                 }
-                if (AutoCones0CB.isChecked()) {
-                    AutoCones0 = "True";
+                if (TeleopCoopertitionNoRB.isChecked()) {
+                    TeleopCoopertitionNo = "True";
                 }
-                if (AutoCones1CB.isChecked()) {
-                    AutoCones1 = "True";
+                if (TeleopAmpStratYesRB.isChecked()) {
+                    TeleopAmpStratYes = "True";
                 }
-                if (AutoCones2CB.isChecked()) {
-                    AutoCones2 = "True";
+                if (TeleopAmpStratNoRB.isChecked()) {
+                    TeleopAmpStratNo = "True";
                 }
-                if (AutoCones3CB.isChecked()) {
-                    AutoCones3 = "True";
-                }
-                if (AutoCubes1CB.isChecked()) {
-                    AutoCubes1 = "True";
-                }
-                if (AutoCubes2CB.isChecked()) {
-                    AutoCubes2 = "True";
-                }
-                if (AutoCubes3CB.isChecked()) {
-                    AutoCubes3 = "True";
-                }
-                if (AutoColorRelianceCB.isChecked()) {
-                    AutoColorReliance = "True";
-                }
+
 
                 Intent startintent = new Intent(getApplicationContext(), data_collection_end_game.class);
                 startActivity(startintent);
@@ -110,4 +96,4 @@ public class data_Collection_sandstorm extends AppCompatActivity {
 
     }
 
-}
+};

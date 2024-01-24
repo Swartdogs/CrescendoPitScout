@@ -44,31 +44,24 @@ public class Actual_Submit extends AppCompatActivity {
             Data_Collection_Page_1.GenRedZone2 + "," +
             Data_Collection_Page_1.GenRedZone3 + "," +
             Data_Collection_Page_1.GenRedZone4 + "," +
-            data_Collection_sandstorm.AutoMobility + "," +
-            data_Collection_sandstorm.AutoTop + "," +
-            data_Collection_sandstorm.AutoMiddle + "," +
-            data_Collection_sandstorm.AutoBottom + "," +
-            data_Collection_sandstorm.AutoCubes0 + "," +
-            data_Collection_sandstorm.AutoCubes1 + "," +
-            data_Collection_sandstorm.AutoCubes2 + "," +
-            data_Collection_sandstorm.AutoCubes3 + "," +
-            data_Collection_sandstorm.AutoCones0 + "," +
-            data_Collection_sandstorm.AutoCones1 + "," +
-            data_Collection_sandstorm.AutoCones2 + "," +
-            data_Collection_sandstorm.AutoCones3 + "," +
-            data_Collection_sandstorm.AutoColorReliance + "," +
-            data_Collection_sandstorm.AutoDock + "," +
-            data_Collection_sandstorm.AutoEngage + "," +
-            data_collection_end_game.TeleEndTopCones + "," +
-            data_collection_end_game.TeleEndMiddleCones + "," +
-            data_collection_end_game.TeleEndBottomCones + "," +
-            data_collection_end_game.TeleEndTopCubes + "," +
-            data_collection_end_game.TeleEndMiddleCubes + "," +
-            data_collection_end_game.TeleEndBottomCubes + "," +
-            data_collection_end_game.TeleEndDefense + "," +
-            data_collection_end_game.TeleEndDock + "," +
-            data_collection_end_game.TeleEndEngage + "," +
-            data_collection_end_game.TeleEndPark + "," +
+            data_Collection_sandstorm.AutoStartNoteYes + "," +
+            data_Collection_sandstorm.AutoStartNoteNo + "," +
+            data_Collection_sandstorm.AutoScoreSpeaker + "," +
+            data_Collection_sandstorm.AutoScoreAmp + "," +
+            data_Collection_sandstorm.TeleopScoreSpeaker + "," +
+            data_Collection_sandstorm.TeleopScoreAmp + "," +
+            data_Collection_sandstorm.TeleopCoopertitionYes + "," +
+            data_Collection_sandstorm.TeleopCoopertitionNo + "," +
+            data_Collection_sandstorm.TeleopAmpStratNo + "," +
+            data_Collection_sandstorm.TeleopAmpStratYes + "," +
+            data_collection_end_game.EndConsistentHangYes + "," +
+            data_collection_end_game.EndCosistentHangNo + "," +
+            data_collection_end_game.EndHarmonyHang + "," +
+            data_collection_end_game.EndSoloHang + "," +
+            data_collection_end_game.EndHumanPlayerPreferenceYes + "," +
+            data_collection_end_game.EndHumanPlayerPreferenceNo + "," +
+            data_collection_end_game.EndHumanPlayerAmpPreference + "," +
+            data_collection_end_game.EndHumanPlayerSourcePreference + "," +
             Save_Page.comment;
 
     File externalStorageDir = Environment.getExternalStorageDirectory();
