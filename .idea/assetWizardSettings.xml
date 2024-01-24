@@ -92,8 +92,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Student\Pictures\apriltagpic.png" />
-                                                <entry key="scalingPercent" value="72" />
+                                                <entry key="imagePath" value="C:\Users\Student\Downloads\WhiteSquareSpongeBobSquarePants.png" />
+                                                <entry key="scalingPercent" value="83" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -126,7 +126,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="legacyIconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="apriltag" />
+                                      <entry key="outputName" value="crescendowhiteicon" />
                                       <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
@@ -314,11 +314,6 @@
                                 </PersistentState>
                               </value>
                             </entry>
-                          </map>
-                        </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="TV_CHANNEL" />
                           </map>
                         </option>
                       </PersistentState>

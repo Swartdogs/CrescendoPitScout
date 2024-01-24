@@ -120,6 +120,7 @@ public class Data_Collection_Page_1 extends AppCompatActivity {
 
                 if (GenTankRB.isChecked()) {
                     GenTank = "True";
+
                 }
                 if (GenSwerveRB.isChecked()) {
                     GenSwerve = "True";
