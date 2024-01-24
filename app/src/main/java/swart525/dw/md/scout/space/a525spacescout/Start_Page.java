@@ -22,7 +22,7 @@ public class Start_Page extends AppCompatActivity {
 
             public void onClick(View v) {
                 Data_Collection_Page_1.GenTeamNum = 0;
-                        Data_Collection_Page_1.GenCubes = "False";
+                /*        Data_Collection_Page_1.GenCubes = "False";
                         Data_Collection_Page_1.GenCones = "False";
                         Data_Collection_Page_1.GenSubstation = "False";
                         Data_Collection_Page_1.GenGround = "False";
@@ -62,7 +62,7 @@ public class Start_Page extends AppCompatActivity {
                         data_collection_end_game.TeleEndEngage = "False";
                         data_collection_end_game.TeleEndPark = "False";
                         Save_Page.comment = "No Comment";
-
+                    */
                 //data_Collection_sandstorm.BallCountAuto = 0;
                 //data_collection_TeleOP.WrongColorYes = "False";
                 //data_collection_TeleOP.WrongColorNo = "False";

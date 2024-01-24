@@ -29,8 +29,8 @@ public class Actual_Submit extends AppCompatActivity {
     //final View txtDebug =(View)findViewById(R.id.TextViewDebug)
 
     //Compiles string for CSV file
-    public String Final_String = Data_Collection_Page_1.GenTeamNum + "," +
-            Data_Collection_Page_1.GenCubes + "," +
+    //public String Final_String = Data_Collection_Page_1.GenTeamNum + "," +
+            /*Data_Collection_Page_1.GenCubes + "," +
             Data_Collection_Page_1.GenCones + "," +
             Data_Collection_Page_1.GenSubstation + "," +
             Data_Collection_Page_1.GenGround + "," +
@@ -73,7 +73,7 @@ public class Actual_Submit extends AppCompatActivity {
 
     File externalStorageDir = Environment.getExternalStorageDirectory();
     public File Scout_Data = new File(externalStorageDir , "/DCIM/" + fileName);
-
+*/
     /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,7 +104,7 @@ public class Actual_Submit extends AppCompatActivity {
         public void Press_Here (View v){
             //Toast.makeText(this, "Start", Toast.LENGTH_LONG).show();
             //txtDebug.setTe("test")
-            if (isExternalStorageWritable() && checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            /*if (isExternalStorageWritable() && checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 Toast.makeText(this, "First If", Toast.LENGTH_LONG).show();
                 if(Scout_Data.exists() && Scout_Data.isFile() ){
                     try {
@@ -136,9 +136,9 @@ public class Actual_Submit extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-            }
-            Toast.makeText(this, "No permissions", Toast.LENGTH_LONG).show();
-        }
+            */}
+            //Toast.makeText(this, "No permissions", Toast.LENGTH_LONG).show();
+        //}
 
     public boolean checkPermission (String permission) {
         int check = ContextCompat.checkSelfPermission(this, permission);
