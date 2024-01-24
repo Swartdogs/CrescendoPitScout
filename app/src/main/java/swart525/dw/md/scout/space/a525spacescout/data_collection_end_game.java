@@ -6,20 +6,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 
 public class data_collection_end_game extends AppCompatActivity {
 
     //Defines needed variables
-    public static String TeleEndTopCubes = "False";
-    public static String TeleEndMiddleCubes = "False";
-    public static String TeleEndBottomCubes = "False";
-    public static String TeleEndTopCones = "False";
-    public static String TeleEndMiddleCones = "False";
-    public static String TeleEndBottomCones = "False";
-    public static String TeleEndDefense = "False";
-    public static String TeleEndDock = "False";
-    public static String TeleEndEngage = "False";
-    public static String TeleEndPark = "False";
+    public static String EndConsistentHangYes = "False";
+    public static String EndCosistentHangNo = "False";
+    public static String EndSoloHang = "False";
+    public static String EndHarmonyHang = "False";
+    public static String EndHumanPlayerPreferenceYes = "False";
+    public static String EndHumanPlayerPreferenceNo = "False";
+    public static String EndHumanPlayerAmpPreference = "False";
+    public static String EndHumanPlayerSourcePreference = "False";
 
 
     @Override
@@ -28,54 +27,51 @@ public class data_collection_end_game extends AppCompatActivity {
         setContentView(R.layout.activity_data_collection_end_game);
 
         //Defines Page Elements
-
-
-        final CheckBox TeleEndTopCubesCB = (CheckBox) findViewById(R.id.TeleEnd_TopCubes_CB);
-        final CheckBox TeleEndMiddleCubesCB = (CheckBox) findViewById(R.id.TeleEnd_MiddleCubes_CB);
-        final CheckBox TeleEndBottomCubesCB = (CheckBox) findViewById(R.id.TeleEnd_BottomCubes_CB);
-        final CheckBox TeleEndDefenceCB = (CheckBox) findViewById(R.id.TeleEnd_Defence_CB);
-        final CheckBox TeleEndTopConesCB = (CheckBox) findViewById(R.id.TeleEnd_TopCones_CB);
-        final CheckBox TeleEndMiddleConesCB = (CheckBox) findViewById(R.id.TeleEnd_MiddleCones_CB);
-        final CheckBox TeleEndBottomConesCB = (CheckBox) findViewById(R.id.TeleEnd_BottomCones_CB);
-        final CheckBox TeleEndDockCB = (CheckBox) findViewById(R.id.TeleEnd_Dock_CB);
-        final CheckBox TeleEndEngageCB = (CheckBox) findViewById(R.id.TeleEnd_Engage_CB);
-        final CheckBox TeleEndParkCB = (CheckBox) findViewById(R.id.TeleEnd_Park_CB);
+        final RadioButton EndConsistentHangYesRB = (RadioButton) findViewById(R.id.End_ConsistentHangYes_RB);
+        final RadioButton EndConsistentHangNoRB = (RadioButton) findViewById(R.id.End_ConsistentHangNo_RB);
+        final RadioButton EndHumanPlayerPreferenceYesRB = (RadioButton) findViewById(R.id.End_HumanPlayerPreferenceYes_RB);
+        final RadioButton EndHumanPlayerPreferenceNoRB = (RadioButton) findViewById(R.id.End_HumanPlayerPreferenceNo_RB);
+        final CheckBox EndSoloHangCB = (CheckBox) findViewById(R.id.End_SoloHang_CB);
+        final CheckBox EndHarmonyHangCB = (CheckBox) findViewById(R.id.End_HarmonyHang_CB);
+        final CheckBox EndHumanPlayerSourceCB = (CheckBox) findViewById(R.id.End_HumanPlayerSource_CB);
+        final CheckBox EndHumanPlayerAmpCB = (CheckBox) findViewById(R.id.End_HumanPlayerAmp_CB);
 
         Button To_Submission = (Button) findViewById(R.id.To_Submission_B); //Defines button for later use
         To_Submission.setOnClickListener(new View.OnClickListener() { //Makes onclick listener for button
             @Override
             public void onClick(View v) {
 
-
-                if (TeleEndTopCubesCB.isChecked()) {
-                    TeleEndTopCubes = "True";
+                if (EndConsistentHangYesRB.isChecked()) {
+                    EndConsistentHangYes = "True";
+                    EndHarmonyHangCB.setEnabled(true);
+                    EndSoloHangCB.setEnabled(true);
                 }
-                if (TeleEndMiddleCubesCB.isChecked()) {
-                    TeleEndMiddleCubes = "True";
+                if (EndConsistentHangNoRB.isChecked()) {
+                    EndCosistentHangNo = "True";
+                    EndHarmonyHangCB.setEnabled(false);
+                    EndSoloHangCB.setEnabled(false);
                 }
-                if (TeleEndBottomCubesCB.isChecked()) {
-                    TeleEndBottomCubes = "True";
+                if (EndHarmonyHangCB.isChecked()) {
+                    EndHarmonyHang = "True";
                 }
-                if (TeleEndDefenceCB.isChecked()) {
-                    TeleEndDefense = "True";
+                if (EndSoloHangCB.isChecked()) {
+                    EndSoloHang = "True";
                 }
-                if (TeleEndTopConesCB.isChecked()) {
-                    TeleEndTopCones = "True";
+                if (EndHumanPlayerPreferenceYesRB.isChecked()) {
+                    EndHumanPlayerSourcePreference = "True";
+                    EndHumanPlayerAmpCB.setEnabled(true);
+                    EndHumanPlayerSourceCB.setEnabled(true);
                 }
-                if (TeleEndMiddleConesCB.isChecked()) {
-                    TeleEndMiddleCones = "True";
+                if (EndHumanPlayerPreferenceNoRB.isChecked()) {
+                    EndHumanPlayerPreferenceNo = "True";
+                    EndHumanPlayerAmpCB.setEnabled(false);
+                    EndHumanPlayerSourceCB.setEnabled(false);
                 }
-                if (TeleEndBottomConesCB.isChecked()) {
-                    TeleEndBottomCones = "True";
+                if (EndHumanPlayerAmpCB.isChecked()) {
+                    EndHumanPlayerAmpPreference = "True";
                 }
-                if (TeleEndDockCB.isChecked()) {
-                    TeleEndDock = "True";
-                }
-                if (TeleEndEngageCB.isChecked()) {
-                    TeleEndEngage = "True";
-                }
-                if (TeleEndParkCB.isChecked()) {
-                    TeleEndPark = "True";
+                if (EndHumanPlayerSourceCB.isChecked()) {
+                    EndHumanPlayerSourcePreference = "True";
                 }
 
                 //Ending position variables

@@ -22,19 +22,20 @@ public class Start_Page extends AppCompatActivity {
 
             public void onClick(View v) {
                 Data_Collection_Page_1.GenTeamNum = 0;
-                        Data_Collection_Page_1.GenOtherResponse = "NA";
-                        Data_Collection_Page_1.GenStageYes = "False";
-                        Data_Collection_Page_1.GenStageNo = "False";
-                        Data_Collection_Page_1.GenTank = "False";
-                        Data_Collection_Page_1.GenSwerve = "False";
-                        Data_Collection_Page_1.GenOther = "False";
-                        Data_Collection_Page_1.GenSource = "False";
+                        Data_Collection_Page_1.GenCubes = "False";
+                        Data_Collection_Page_1.GenCones = "False";
+                        Data_Collection_Page_1.GenSubstation = "False";
                         Data_Collection_Page_1.GenGround = "False";
-                        Data_Collection_Page_1.GenDefenseYes = "False";
-                        Data_Collection_Page_1.GenDefenseNo = "False";
-                        Data_Collection_Page_1.GenAprilTagYes = "False";
-                        Data_Collection_Page_1.GenAprilTagNo = "False";
-
+                        Data_Collection_Page_1.GenSideways = "False";
+                        Data_Collection_Page_1.GenRightSideUp = "False";
+                        Data_Collection_Page_1.GenBlueZone1 = "False";
+                        Data_Collection_Page_1.GenBlueZone2 = "False";
+                        Data_Collection_Page_1.GenBlueZone3 = "False";
+                        Data_Collection_Page_1.GenBlueZone4 = "False";
+                        Data_Collection_Page_1.GenRedZone1 = "False";
+                        Data_Collection_Page_1.GenRedZone2 = "False";
+                        Data_Collection_Page_1.GenRedZone3 = "False";
+                        Data_Collection_Page_1.GenRedZone4 = "False";
                         data_Collection_sandstorm.AutoMobility = "False";
                         data_Collection_sandstorm.AutoTop = "False";
                         data_Collection_sandstorm.AutoMiddle = "False";

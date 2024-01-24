@@ -30,18 +30,20 @@ public class Actual_Submit extends AppCompatActivity {
 
     //Compiles string for CSV file
     public String Final_String = Data_Collection_Page_1.GenTeamNum + "," +
-            Data_Collection_Page_1.GenOtherResponse + "," +
-            Data_Collection_Page_1.GenStageYes + "," +
-            Data_Collection_Page_1.GenStageNo + "," +
-            Data_Collection_Page_1.GenTank + "," +
-            Data_Collection_Page_1.GenSwerve + "," +
-            Data_Collection_Page_1.GenOther + "," +
-            Data_Collection_Page_1.GenSource + "," +
+            Data_Collection_Page_1.GenCubes + "," +
+            Data_Collection_Page_1.GenCones + "," +
+            Data_Collection_Page_1.GenSubstation + "," +
             Data_Collection_Page_1.GenGround + "," +
-            Data_Collection_Page_1.GenDefenseYes + "," +
-            Data_Collection_Page_1.GenDefenseNo + "," +
-            Data_Collection_Page_1.GenAprilTagYes + "," +
-            Data_Collection_Page_1.GenAprilTagNo + "," +
+            Data_Collection_Page_1.GenSideways + "," +
+            Data_Collection_Page_1.GenRightSideUp + "," +
+            Data_Collection_Page_1.GenBlueZone1 + "," +
+            Data_Collection_Page_1.GenBlueZone2 + "," +
+            Data_Collection_Page_1.GenBlueZone3 + "," +
+            Data_Collection_Page_1.GenBlueZone4 + "," +
+            Data_Collection_Page_1.GenRedZone1 + "," +
+            Data_Collection_Page_1.GenRedZone2 + "," +
+            Data_Collection_Page_1.GenRedZone3 + "," +
+            Data_Collection_Page_1.GenRedZone4 + "," +
             data_Collection_sandstorm.AutoMobility + "," +
             data_Collection_sandstorm.AutoTop + "," +
             data_Collection_sandstorm.AutoMiddle + "," +
