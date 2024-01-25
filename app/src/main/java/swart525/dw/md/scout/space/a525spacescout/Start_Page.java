@@ -44,9 +44,6 @@ public class Start_Page extends AppCompatActivity {
                         data_Collection_sandstorm.TeleopScoreAmp = "False";
                         data_Collection_sandstorm.TeleopCoopertitionYes = "False";
                         data_Collection_sandstorm.TeleopCoopertitionNo = "False";
-                        //data_Collection_sandstorm.TeleopWhenHitStart = "False";
-                        //data_Collection_sandstorm.TeleopWhenHitHalfway = "False";
-                        //data_Collection_sandstorm.TeleopWhenHitEnd = "False";
                         data_Collection_sandstorm.TeleopAmpStratNo = "False";
                         data_Collection_sandstorm.TeleopAmpStratYes = "False";
                         data_collection_end_game.EndConsistentHangYes = "False";
