@@ -31,12 +31,12 @@ public class Actual_Submit extends AppCompatActivity {
     //Compiles string for CSV file
     public String Final_String =
             Data_Collection_Page_1.GenTeamNum + "," +
-            Data_Collection_Page_1.GenOtherResponse + "," +
             Data_Collection_Page_1.GenStageYes + "," +
             Data_Collection_Page_1.GenStageNo + "," +
             Data_Collection_Page_1.GenTank + "," +
             Data_Collection_Page_1.GenSwerve + "," +
             Data_Collection_Page_1.GenOther + "," +
+            Data_Collection_Page_1.GenOtherResponse + "," +
             Data_Collection_Page_1.GenSource + "," +
             Data_Collection_Page_1.GenGround + "," +
             Data_Collection_Page_1.GenDefenseYes + "," +
@@ -57,6 +57,8 @@ public class Actual_Submit extends AppCompatActivity {
             data_Collection_sandstorm.TeleopHumanPlayerSourcePreference + "," +
             data_collection_end_game.EndConsistentHangYes + "," +
             data_collection_end_game.EndCosistentHangNo + "," +
+            data_collection_end_game.EndSoloHang + "," +
+            data_collection_end_game.EndHarmonyHang + "," +
             Save_Page.comment;
 
     File externalStorageDir = Environment.getExternalStorageDirectory();
