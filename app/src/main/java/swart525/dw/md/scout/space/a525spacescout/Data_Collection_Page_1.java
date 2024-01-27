@@ -105,12 +105,6 @@ public class Data_Collection_Page_1 extends AppCompatActivity {
                     }
                 }
 
-                //Collect text input
-                GenOtherResponse = GenOtherTXT.getText().toString();
-                Intent startintent = new Intent(getApplicationContext(), data_Collection_sandstorm.class);
-                startActivity(startintent);
-
-
                 if (GenStageYesRB.isChecked()) {
                     GenStageYes = "True";
                 }
@@ -135,14 +129,12 @@ public class Data_Collection_Page_1 extends AppCompatActivity {
                 if (GenGroundCB.isChecked()) {
                     GenGround = "True";
                 }
-
                 if (GenDefenseYesRB.isChecked()) {
                     GenDefenseYes = "True";
                 }
                 if (GenDefenseNoRB.isChecked()) {
                     GenDefenseNo = "True";
                 }
-
                 if (GenAprilTagYesRB.isChecked()) {
                     GenAprilTagYes = "True";
                 }

@@ -12,6 +12,49 @@
 
 
     <CheckBox
+        android:id="@+id/teleop_HumanAmp_CB"
+        android:layout_width="252dp"
+        android:layout_height="90dp"
+        android:text="Amp"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <CheckBox
+        android:id="@+id/teleop_HumanSource_CB"
+        android:layout_width="252dp"
+        android:layout_height="90dp"
+        android:text="Source"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.864" />
+
+    <TextView
+        android:id="@+id/teleop_Human_TB"
+        android:layout_width="663dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bolt_regular"
+        android:orientation="horizontal"
+        android:text="Do you have a preference on where your human player is?"
+        android:textColor="#000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.701" />
+
+    <CheckBox
         android:id="@+id/auto_ScoreAmp_CB"
         android:layout_width="252dp"
         android:layout_height="90dp"
@@ -25,20 +68,20 @@
         app:layout_constraintVertical_bias="0.243" />
 
     <TextView
-        android:id="@+id/Auto_StartNote_TB"
+        android:id="@+id/Auto_NoteNum_TB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bolt_regular"
-        android:text="Do you start with a note?"
+        android:text="How many notes can you score?"
         android:textAlignment="textStart"
         android:textColor="#111"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.105" />
 
     <CheckBox
         android:id="@+id/teleop_ScoreSpeaker_CB"
@@ -95,23 +138,6 @@
         app:layout_constraintVertical_bias="0.206" />
 
     <TextView
-        android:id="@+id/teleop_Coopertition_TB"
-        android:layout_width="663dp"
-        android:layout_height="109dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/bolt_regular"
-        android:orientation="horizontal"
-        android:text="Do you plan on hitting the coopertition button?"
-        android:textColor="#000"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.397"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
-
-    <TextView
         android:id="@+id/teleop_Title_TB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,103 +147,50 @@
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.331" />
+        app:layout_constraintVertical_bias="0.342" />
 
     <RadioGroup
         android:id="@+id/Tele_CoOpButton_RG"
-        android:layout_width="530dp"
-        android:layout_height="72dp"
+        android:layout_width="621dp"
+        android:layout_height="67dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589">
+        app:layout_constraintVertical_bias="0.587">
 
         <RadioButton
             android:id="@+id/teleop_CoopertitionYes_RB"
             android:layout_width="200dp"
             android:layout_height="75dp"
             android:text="Yes"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.071"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.576" />
+            android:textSize="36sp" />
 
         <RadioButton
             android:id="@+id/teleop_CoopertitionNo_RB"
             android:layout_width="200dp"
             android:layout_height="75dp"
             android:text="No"
-            android:textSize="36sp"
+            android:textSize="36sp" />
+
+        <RadioButton
+            android:id="@+id/teleop_CoopertitionDepends_RB"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:text="Depends"
+            android:textSize="36dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.405"
+            app:layout_constraintHorizontal_bias="0.739"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.576" />
-    </RadioGroup>
 
-    <TextView
-        android:id="@+id/teleop_AmpStrat_TB"
-        android:layout_width="663dp"
-        android:layout_height="118dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/bolt_regular"
-        android:text="Do you have a strategy when it comes to amplification?"
-        android:textColor="#000"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.397"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703" />
-
-    <RadioGroup
-        android:id="@+id/Tele_AmpStrategy_RG"
-        android:layout_width="623dp"
-        android:layout_height="54dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737">
-
-        <RadioButton
-            android:id="@+id/teleop_AmpStratNo_RB"
-            android:layout_width="200dp"
-            android:layout_height="75dp"
-            android:text="Yes"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.405"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.848" />
-
-        <RadioButton
-            android:id="@+id/teleop_AmpStratYes_RB"
-            android:layout_width="200dp"
-            android:layout_height="75dp"
-            android:text="No"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.071"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.848" />
     </RadioGroup>
 
     <CheckBox
@@ -244,10 +217,11 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.412" />
+
 
     <CheckBox
         android:id="@+id/teleop_ScoreAmp_CB"
@@ -257,50 +231,10 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.679"
+        app:layout_constraintHorizontal_bias="0.678"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443" />
-
-    <RadioGroup
-        android:id="@+id/Auto_NoteStart_RG"
-        android:layout_width="606dp"
-        android:layout_height="62dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144">
-
-        <RadioButton
-            android:id="@+id/Auto_StartNoteYes_RB"
-            android:layout_width="200dp"
-            android:layout_height="75dp"
-            android:text="Yes"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.071"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.131" />
-
-        <RadioButton
-            android:id="@+id/Auto_StartNoteNo_RB"
-            android:layout_width="200dp"
-            android:layout_height="75dp"
-            android:text="No"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.405"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.131" />
-    </RadioGroup>
-
+        app:layout_constraintVertical_bias="0.442" />
 
     <Button
         android:id="@+id/To_EndGame_B"
@@ -311,7 +245,7 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -323,5 +257,76 @@
         app:barrierDirection="left"
         tools:layout_editor_absoluteX="800dp" />
 
+    <EditText
+        android:id="@+id/Auto_NoteNum_TXT"
+        android:layout_width="492dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
 
+    <TextView
+        android:id="@+id/teleop_Coopertition_TB"
+        android:layout_width="663dp"
+        android:layout_height="109dp"
+        android:fontFamily="@font/bolt_regular"
+        android:orientation="horizontal"
+        android:text="Do you plan on hitting the coopertition button?"
+        android:textColor="#000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.532" />
+
+
+    <RadioGroup
+        android:id="@+id/Tele_Human_RG"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761">
+
+        <RadioButton
+            android:id="@+id/teleop_HumanYes_RB"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:text="Yes"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.131"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.76" />
+
+        <RadioButton
+            android:id="@+id/teleop_HumanNo_RB"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:text="No"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.465"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.761" />
+        />
+
+    </RadioGroup>
 </android.support.constraint.ConstraintLayout>

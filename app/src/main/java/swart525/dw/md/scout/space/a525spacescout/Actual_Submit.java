@@ -29,51 +29,39 @@ public class Actual_Submit extends AppCompatActivity {
     //final View txtDebug =(View)findViewById(R.id.TextViewDebug)
 
     //Compiles string for CSV file
-    //public String Final_String = Data_Collection_Page_1.GenTeamNum + "," +
-            /*Data_Collection_Page_1.GenCubes + "," +
-            Data_Collection_Page_1.GenCones + "," +
-            Data_Collection_Page_1.GenSubstation + "," +
+    public String Final_String =
+            Data_Collection_Page_1.GenTeamNum + "," +
+            Data_Collection_Page_1.GenOtherResponse + "," +
+            Data_Collection_Page_1.GenStageYes + "," +
+            Data_Collection_Page_1.GenStageNo + "," +
+            Data_Collection_Page_1.GenTank + "," +
+            Data_Collection_Page_1.GenSwerve + "," +
+            Data_Collection_Page_1.GenOther + "," +
+            Data_Collection_Page_1.GenSource + "," +
             Data_Collection_Page_1.GenGround + "," +
-            Data_Collection_Page_1.GenSideways + "," +
-            Data_Collection_Page_1.GenRightSideUp + "," +
-            Data_Collection_Page_1.GenBlueZone1 + "," +
-            Data_Collection_Page_1.GenBlueZone2 + "," +
-            Data_Collection_Page_1.GenBlueZone3 + "," +
-            Data_Collection_Page_1.GenBlueZone4 + "," +
-            Data_Collection_Page_1.GenRedZone1 + "," +
-            Data_Collection_Page_1.GenRedZone2 + "," +
-            Data_Collection_Page_1.GenRedZone3 + "," +
-            Data_Collection_Page_1.GenRedZone4 + "," +
-            data_Collection_sandstorm.AutoMobility + "," +
-            data_Collection_sandstorm.AutoTop + "," +
-            data_Collection_sandstorm.AutoMiddle + "," +
-            data_Collection_sandstorm.AutoBottom + "," +
-            data_Collection_sandstorm.AutoCubes0 + "," +
-            data_Collection_sandstorm.AutoCubes1 + "," +
-            data_Collection_sandstorm.AutoCubes2 + "," +
-            data_Collection_sandstorm.AutoCubes3 + "," +
-            data_Collection_sandstorm.AutoCones0 + "," +
-            data_Collection_sandstorm.AutoCones1 + "," +
-            data_Collection_sandstorm.AutoCones2 + "," +
-            data_Collection_sandstorm.AutoCones3 + "," +
-            data_Collection_sandstorm.AutoColorReliance + "," +
-            data_Collection_sandstorm.AutoDock + "," +
-            data_Collection_sandstorm.AutoEngage + "," +
-            data_collection_end_game.TeleEndTopCones + "," +
-            data_collection_end_game.TeleEndMiddleCones + "," +
-            data_collection_end_game.TeleEndBottomCones + "," +
-            data_collection_end_game.TeleEndTopCubes + "," +
-            data_collection_end_game.TeleEndMiddleCubes + "," +
-            data_collection_end_game.TeleEndBottomCubes + "," +
-            data_collection_end_game.TeleEndDefense + "," +
-            data_collection_end_game.TeleEndDock + "," +
-            data_collection_end_game.TeleEndEngage + "," +
-            data_collection_end_game.TeleEndPark + "," +
+            Data_Collection_Page_1.GenDefenseYes + "," +
+            Data_Collection_Page_1.GenDefenseNo + "," +
+            Data_Collection_Page_1.GenAprilTagYes + "," +
+            Data_Collection_Page_1.GenAprilTagNo + "," +
+            data_Collection_sandstorm.AutoNoteStartNum + "," +
+            data_Collection_sandstorm.AutoScoreSpeaker + "," +
+            data_Collection_sandstorm.AutoScoreAmp + "," +
+            data_Collection_sandstorm.TeleopScoreSpeaker + "," +
+            data_Collection_sandstorm.TeleopScoreAmp + "," +
+            data_Collection_sandstorm.TeleopCoopertitionYes + "," +
+            data_Collection_sandstorm.TeleopCoopertitionNo + "," +
+            data_Collection_sandstorm.TeleopCoopertitionDepends + "," +
+            data_Collection_sandstorm.TeleopHumanPlayerPreferenceYes + "," +
+            data_Collection_sandstorm.TeleopHumanPlayerPreferenceNo + "," +
+            data_Collection_sandstorm.TeleopHumanPlayerAmpPreference + "," +
+            data_Collection_sandstorm.TeleopHumanPlayerSourcePreference + "," +
+            data_collection_end_game.EndConsistentHangYes + "," +
+            data_collection_end_game.EndCosistentHangNo + "," +
             Save_Page.comment;
 
     File externalStorageDir = Environment.getExternalStorageDirectory();
     public File Scout_Data = new File(externalStorageDir , "/DCIM/" + fileName);
-*/
+
     /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,9 +90,9 @@ public class Actual_Submit extends AppCompatActivity {
         }
 
         public void Press_Here (View v){
-            //Toast.makeText(this, "Start", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Start", Toast.LENGTH_LONG).show();
             //txtDebug.setTe("test")
-            /*if (isExternalStorageWritable() && checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            if (isExternalStorageWritable() && checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 Toast.makeText(this, "First If", Toast.LENGTH_LONG).show();
                 if(Scout_Data.exists() && Scout_Data.isFile() ){
                     try {
@@ -136,9 +124,9 @@ public class Actual_Submit extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-            */}
-            //Toast.makeText(this, "No permissions", Toast.LENGTH_LONG).show();
-        //}
+            }
+            Toast.makeText(this, "No permissions", Toast.LENGTH_LONG).show();
+        }
 
     public boolean checkPermission (String permission) {
         int check = ContextCompat.checkSelfPermission(this, permission);

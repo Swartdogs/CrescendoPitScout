@@ -315,7 +315,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/bolt_regular"
         android:foregroundGravity="center_horizontal"
-        android:text="Do you have a defense strategy?"
+        android:text="Do you tend to play defense?"
         android:textColor="#000"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"

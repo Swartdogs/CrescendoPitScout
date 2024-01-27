@@ -6,23 +6,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class data_Collection_sandstorm extends AppCompatActivity {
 
     //Defines variables for use
-    public static String AutoStartNoteYes = "False";
-    public static String AutoStartNoteNo = "False";
+    public static int AutoNoteStartNum = 0;
     public static String AutoScoreSpeaker = "False";
     public static String AutoScoreAmp = "False";
     public static String TeleopScoreSpeaker = "False";
     public static String TeleopScoreAmp = "False";
     public static String TeleopCoopertitionYes = "False";
-
     public static String TeleopCoopertitionNo = "False";
-
-    public static String TeleopAmpStratNo = "False";
-    public static String TeleopAmpStratYes = "False";
+    public static String TeleopCoopertitionDepends = "False";
+    public static String TeleopHumanPlayerPreferenceYes = "False";
+    public static String TeleopHumanPlayerPreferenceNo = "False";
+    public static String TeleopHumanPlayerAmpPreference = "False";
+    public static String TeleopHumanPlayerSourcePreference = "False";
 
 
 
@@ -32,19 +34,23 @@ public class data_Collection_sandstorm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data__collection_sandstorm);
 
+        //final EditText Match_Num_txt = (EditText) findViewById(R.id.Match_Num_Txt);
+        final EditText AutoNoteNumTXT = (EditText) findViewById(R.id.Auto_NoteNum_TXT);
+
         //Defines all checkboxes for positions
         final CheckBox AutoScoreSpeakerCB = (CheckBox) findViewById(R.id.auto_ScoreSpeaker_CB);
         final CheckBox AutoScoreAmpCB = (CheckBox) findViewById(R.id.auto_ScoreAmp_CB);
         final CheckBox TeleopScoreSpeakerCB = (CheckBox) findViewById(R.id.teleop_ScoreSpeaker_CB);
         final CheckBox TeleopScoreAmpCB = (CheckBox) findViewById(R.id.teleop_ScoreAmp_CB);
+        final CheckBox TeleopHumanPlayerSourceCB = (CheckBox) findViewById(R.id.teleop_HumanSource_CB);
+        final CheckBox TeleopHumanPlayerAmpCB = (CheckBox) findViewById(R.id.teleop_HumanAmp_CB);
 
         //Defines all radioboxes for positions
-        final RadioButton AutoStartNoteYesRB = (RadioButton) findViewById(R.id.Auto_StartNoteYes_RB);
-        final RadioButton AutoStartNoteNoRB = (RadioButton) findViewById(R.id.Auto_StartNoteNo_RB);
         final RadioButton TeleopCoopertitionYesRB = (RadioButton) findViewById(R.id.teleop_CoopertitionYes_RB);
         final RadioButton TeleopCoopertitionNoRB = (RadioButton) findViewById(R.id.teleop_CoopertitionNo_RB);
-        final RadioButton TeleopAmpStratYesRB = (RadioButton) findViewById(R.id.teleop_AmpStratYes_RB);
-        final RadioButton TeleopAmpStratNoRB = (RadioButton) findViewById(R.id.teleop_AmpStratNo_RB);
+        final RadioButton TeleopCoopertitionDependsRB = (RadioButton) findViewById(R.id.teleop_CoopertitionDepends_RB);
+        final RadioButton TeleopHumanPlayerPreferenceYesRB = (RadioButton) findViewById(R.id.teleop_HumanYes_RB);
+        final RadioButton TeleopHumanPlayerPreferenceNoRB = (RadioButton) findViewById(R.id.teleop_HumanNo_RB);
 
 
         //Defines and implements Button to continue along with variable savings
@@ -54,7 +60,12 @@ public class data_Collection_sandstorm extends AppCompatActivity {
         { //Makes onclick listener for button
             @Override
             public void onClick(View v) {
-
+                //Sets note starting amount string to inputted text
+                if (AutoNoteNumTXT.getText().toString().isEmpty()) {
+                    AutoNoteStartNum = 0;
+                } else {
+                    AutoNoteStartNum = Integer.parseInt(AutoNoteNumTXT.getText().toString());
+                }
                 /*add in data collection pieces from checkboxes*/
                 if (AutoScoreSpeakerCB.isChecked()) {
                     AutoScoreSpeaker = "True";
@@ -68,24 +79,26 @@ public class data_Collection_sandstorm extends AppCompatActivity {
                 if (TeleopScoreAmpCB.isChecked()) {
                     TeleopScoreAmp = "True";
                 }
-                //add in data collection pieces from radio buttons
-                if (AutoStartNoteYesRB.isChecked()) {
-                    AutoStartNoteYes = "True";
-                }
-                if (AutoStartNoteNoRB.isChecked()) {
-                    AutoStartNoteNo = "True";
-                }
                 if (TeleopCoopertitionYesRB.isChecked()) {
                     TeleopCoopertitionYes = "True";
                 }
                 if (TeleopCoopertitionNoRB.isChecked()) {
                     TeleopCoopertitionNo = "True";
                 }
-                if (TeleopAmpStratYesRB.isChecked()) {
-                    TeleopAmpStratYes = "True";
+                if (TeleopCoopertitionDependsRB.isChecked()) {
+                    TeleopCoopertitionDepends = "True";
                 }
-                if (TeleopAmpStratNoRB.isChecked()) {
-                    TeleopAmpStratNo = "True";
+                if (TeleopHumanPlayerPreferenceYesRB.isChecked()) {
+                    TeleopHumanPlayerPreferenceYes = "True";
+                }
+                if (TeleopHumanPlayerPreferenceNoRB.isChecked()) {
+                    TeleopHumanPlayerPreferenceNo = "True";
+                }
+                if (TeleopHumanPlayerSourceCB.isChecked()) {
+                    TeleopHumanPlayerSourcePreference = "True";
+                }
+                if (TeleopHumanPlayerAmpCB.isChecked()) {
+                    TeleopHumanPlayerAmpPreference = "True";
                 }
 
 
