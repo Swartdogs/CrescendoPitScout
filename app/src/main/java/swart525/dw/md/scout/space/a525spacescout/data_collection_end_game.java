@@ -11,10 +11,11 @@ import android.widget.RadioButton;
 public class data_collection_end_game extends AppCompatActivity {
 
     //Defines needed variables
-    public static String EndConsistentHangYes = "False";
     public static String EndCosistentHangNo = "False";
     public static String EndSoloHang = "False";
     public static String EndHarmonyHang = "False";
+    public static String EndScoreTrapYes = "False";
+    public static String EndScoreTrapNo = "False";
 
 
 
@@ -24,10 +25,11 @@ public class data_collection_end_game extends AppCompatActivity {
         setContentView(R.layout.activity_data_collection_end_game);
 
         //Defines Page Elements
-        final RadioButton EndConsistentHangYesRB = (RadioButton) findViewById(R.id.End_ConsistentHangYes_RB);
+        final RadioButton EndHarmonyHangRB = (RadioButton) findViewById(R.id.End_YesHarmony_RB);
+        final RadioButton EndSoloHangRB = (RadioButton) findViewById(R.id.End_YesSolo_RB);
         final RadioButton EndConsistentHangNoRB = (RadioButton) findViewById(R.id.End_ConsistentHangNo_RB);
-        final CheckBox EndSoloHangCB = (CheckBox) findViewById(R.id.End_SoloHang_CB);
-        final CheckBox EndHarmonyHangCB = (CheckBox) findViewById(R.id.End_HarmonyHang_CB);
+        final RadioButton EndScoreTrapYesRB = (RadioButton) findViewById(R.id.End_ScoreTrapYes_RB);
+        final RadioButton EndScoreTrapNoRB = (RadioButton) findViewById(R.id.End_ScoreTrapNo_RB);
 
 
         Button To_Submission = (Button) findViewById(R.id.To_Submission_B); //Defines button for later use
@@ -36,16 +38,15 @@ public class data_collection_end_game extends AppCompatActivity {
             public void onClick(View v) {
 
                 //EndConsistentHangYesRB.setOnCheckedChangeListener(EndHarmonyHangCB.setEnabled(true));
-               // EndConsistentHangYesRB.setOnCheckedChangeListener(EndSoloHangCB.setEnabled(true));
-                //
+               //EndConsistentHangYesRB.setOnCheckedChangeListener(EndSoloHangCB.setEnabled(true));
 
-               /* EndConsistentHangYesRB.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                    }
-                });
-                    EndSoloHangCB.setVisibility(View.VISIBLE); */
+               //EndConsistentHangYesRB.setOnClickListener(new View.OnClickListener() {
+                    //@Override
+                   // public void onClick(View view) {
+                      //  EndSoloHangCB.setVisibility(View.VISIBLE);
+                      //  EndHarmonyHangCB.setVisibility(View.VISIBLE);
+                  //  }
+               // });
 
                 //EndSoloHangCB.setVisibility(View.VISIBLE);
                 //EndHarmonyHangCB.setVisibility(View.VISIBLE);
@@ -55,17 +56,22 @@ public class data_collection_end_game extends AppCompatActivity {
 
                 //EndSoloHangCB.setVisibility(View.INVISIBLE);
                 //EndHarmonyHangCB.setVisibility(View.INVISIBLE);
-                if (EndConsistentHangYesRB.isChecked()) {
-                    EndConsistentHangYes = "True";
-                }
+                  //  EndConsistentHangYes = "True";
+                //}
                 if (EndConsistentHangNoRB.isChecked()) {
                     EndCosistentHangNo = "True";
                 }
-                if (EndHarmonyHangCB.isChecked()) {
+                if (EndHarmonyHangRB.isChecked()) {
                     EndHarmonyHang = "True";
                 }
-                if (EndSoloHangCB.isChecked()) {
+                if (EndSoloHangRB.isChecked()) {
                     EndSoloHang = "True";
+                }
+                if (EndScoreTrapYesRB.isChecked()) {
+                    EndScoreTrapYes = "True";
+                }
+                if (EndScoreTrapNoRB.isChecked()) {
+                    EndScoreTrapNo = "True";
                 }
 
 

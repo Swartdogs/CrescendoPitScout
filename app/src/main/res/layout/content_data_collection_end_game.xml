@@ -4,49 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A5A5A5"
+    android:background="#BEBEBE"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".data_collection_end_game"
     tools:showIn="@layout/activity_data_collection_end_game">
 
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="1325dp"
+        android:layout_height="602dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/diesel" />
+
     <TextView
-        android:id="@+id/End_PictureReminder_TB"
-        android:layout_width="485dp"
-        android:layout_height="83dp"
+        android:id="@+id/end_ScoreTrap_TB"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
         android:fontFamily="@font/bolt_regular"
-        android:text="Take picture of robot"
-        android:textColor="#000000"
+        android:text="Can you score in the trap?"
+        android:textColor="#000"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
+        app:layout_constraintVertical_bias="0.371" />
 
     <RadioGroup
-        android:id="@+id/End_ConsistentHang_RG"
-        android:layout_width="660dp"
-        android:layout_height="67dp"
+        android:id="@+id/End_ScoreTrap_RG"
+        android:layout_width="522dp"
+        android:layout_height="82dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168">
+        app:layout_constraintVertical_bias="0.423">
 
         <RadioButton
-            android:id="@+id/End_ConsistentHangYes_RB"
+            android:id="@+id/End_ScoreTrapYes_RB"
             android:layout_width="200dp"
             android:layout_height="75dp"
             android:text="Yes"
             android:textSize="45sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintHorizontal_bias="0.23"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.456" />
+
+        <RadioButton
+            android:id="@+id/End_ScoreTrapNo_RB"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:text="No"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.611"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.455" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/End_HangConsistence_TB"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:fontFamily="@font/bolt_regular"
+        android:text="Can you hang consistently?"
+        android:textColor="#000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139" />
+
+    <RadioGroup
+        android:id="@+id/End_ConsistentHang_RG"
+        android:layout_width="554dp"
+        android:layout_height="291dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.224">
+
+
+        <RadioButton
+            android:id="@+id/End_YesHarmony_RB"
+            android:layout_width="580dp"
+            android:layout_height="75dp"
+            android:text="Yes, in harmony"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.243"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229" />
+
+        <RadioButton
+            android:id="@+id/End_YesSolo_RB"
+            android:layout_width="560dp"
+            android:layout_height="75dp"
+            android:text="Yes, but only solo hang"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.243"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229" />
 
         <RadioButton
             android:id="@+id/End_ConsistentHangNo_RB"
@@ -56,9 +136,10 @@
             android:textSize="45sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.645"
+            app:layout_constraintHorizontal_bias="0.591"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229" />
 
     </RadioGroup>
 
@@ -88,53 +169,10 @@
         android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
-
-    <TextView
-        android:id="@+id/End_HangConsistence_TB"
-        android:layout_width="670dp"
-        android:layout_height="51dp"
-        android:fontFamily="@font/bolt_regular"
-        android:text="Can you hang consistently?"
-        android:textColor="#000"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
-
-    <CheckBox
-        android:id="@+id/End_SoloHang_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:enabled="true"
-        android:text="Solo"
-        android:textSize="45sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
-
-    <CheckBox
-        android:id="@+id/End_HarmonyHang_CB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:enabled="true"
-        android:text="Harmony"
-        android:textSize="45sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.261"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.969" />
 
 
 </android.support.constraint.ConstraintLayout>

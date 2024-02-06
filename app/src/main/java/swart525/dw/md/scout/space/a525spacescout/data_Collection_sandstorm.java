@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -21,7 +22,6 @@ public class data_Collection_sandstorm extends AppCompatActivity {
     public static String TeleopCoopertitionYes = "False";
     public static String TeleopCoopertitionNo = "False";
     public static String TeleopCoopertitionDepends = "False";
-    public static String TeleopHumanPlayerPreferenceYes = "False";
     public static String TeleopHumanPlayerPreferenceNo = "False";
     public static String TeleopHumanPlayerAmpPreference = "False";
     public static String TeleopHumanPlayerSourcePreference = "False";
@@ -34,6 +34,7 @@ public class data_Collection_sandstorm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data__collection_sandstorm);
 
+
         //final EditText Match_Num_txt = (EditText) findViewById(R.id.Match_Num_Txt);
         final EditText AutoNoteNumTXT = (EditText) findViewById(R.id.Auto_NoteNum_TXT);
 
@@ -42,16 +43,14 @@ public class data_Collection_sandstorm extends AppCompatActivity {
         final CheckBox AutoScoreAmpCB = (CheckBox) findViewById(R.id.auto_ScoreAmp_CB);
         final CheckBox TeleopScoreSpeakerCB = (CheckBox) findViewById(R.id.teleop_ScoreSpeaker_CB);
         final CheckBox TeleopScoreAmpCB = (CheckBox) findViewById(R.id.teleop_ScoreAmp_CB);
-        final CheckBox TeleopHumanPlayerSourceCB = (CheckBox) findViewById(R.id.teleop_HumanSource_CB);
-        final CheckBox TeleopHumanPlayerAmpCB = (CheckBox) findViewById(R.id.teleop_HumanAmp_CB);
 
         //Defines all radioboxes for positions
         final RadioButton TeleopCoopertitionYesRB = (RadioButton) findViewById(R.id.teleop_CoopertitionYes_RB);
         final RadioButton TeleopCoopertitionNoRB = (RadioButton) findViewById(R.id.teleop_CoopertitionNo_RB);
         final RadioButton TeleopCoopertitionDependsRB = (RadioButton) findViewById(R.id.teleop_CoopertitionDepends_RB);
-        final RadioButton TeleopHumanPlayerPreferenceYesRB = (RadioButton) findViewById(R.id.teleop_HumanYes_RB);
         final RadioButton TeleopHumanPlayerPreferenceNoRB = (RadioButton) findViewById(R.id.teleop_HumanNo_RB);
-
+        final RadioButton TeleopHumanPlayerSourceCB = (RadioButton) findViewById(R.id.teleop_HumanYesAmp_RB);
+        final RadioButton TeleopHumanPlayerAmpCB = (RadioButton) findViewById(R.id.teleop_HumanYesSource_RB);
 
         //Defines and implements Button to continue along with variable savings
         final Button To_EndGame_B = (Button) findViewById(R.id.To_EndGame_B);
@@ -88,9 +87,6 @@ public class data_Collection_sandstorm extends AppCompatActivity {
                 if (TeleopCoopertitionDependsRB.isChecked()) {
                     TeleopCoopertitionDepends = "True";
                 }
-                if (TeleopHumanPlayerPreferenceYesRB.isChecked()) {
-                    TeleopHumanPlayerPreferenceYes = "True";
-                }
                 if (TeleopHumanPlayerPreferenceNoRB.isChecked()) {
                     TeleopHumanPlayerPreferenceNo = "True";
                 }
@@ -101,10 +97,10 @@ public class data_Collection_sandstorm extends AppCompatActivity {
                     TeleopHumanPlayerAmpPreference = "True";
                 }
 
-
                 Intent startintent = new Intent(getApplicationContext(), data_collection_end_game.class);
                 startActivity(startintent);
             }
+
         });
 
     }

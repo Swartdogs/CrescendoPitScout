@@ -51,14 +51,13 @@ public class Actual_Submit extends AppCompatActivity {
             data_Collection_sandstorm.TeleopCoopertitionYes + "," +
             data_Collection_sandstorm.TeleopCoopertitionNo + "," +
             data_Collection_sandstorm.TeleopCoopertitionDepends + "," +
-            data_Collection_sandstorm.TeleopHumanPlayerPreferenceYes + "," +
             data_Collection_sandstorm.TeleopHumanPlayerPreferenceNo + "," +
             data_Collection_sandstorm.TeleopHumanPlayerAmpPreference + "," +
             data_Collection_sandstorm.TeleopHumanPlayerSourcePreference + "," +
-            data_collection_end_game.EndConsistentHangYes + "," +
             data_collection_end_game.EndCosistentHangNo + "," +
             data_collection_end_game.EndSoloHang + "," +
             data_collection_end_game.EndHarmonyHang + "," +
+            data_collection_end_game.EndScoreTrapYes + "," +
             Save_Page.comment;
 
     File externalStorageDir = Environment.getExternalStorageDirectory();

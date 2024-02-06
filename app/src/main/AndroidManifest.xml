@@ -24,6 +24,7 @@
         </activity>
         <activity
             android:name=".Data_Collection_Page_1"
+            android:windowSoftInputMode="stateHidden"
             android:label="@string/title_activity_data__collection__page_1"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

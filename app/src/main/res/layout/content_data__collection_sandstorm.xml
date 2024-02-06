@@ -4,38 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9B9B9B"
+    android:background="#BEBEBE"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     app:layout_constraintHorizontal_bias="0.145"
     tools:context=".data_collection_autonomous"
     tools:showIn="@layout/activity_data__collection_sandstorm">
 
-
-    <CheckBox
-        android:id="@+id/teleop_HumanAmp_CB"
-        android:layout_width="252dp"
-        android:layout_height="90dp"
-        android:text="Amp"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
-
-    <CheckBox
-        android:id="@+id/teleop_HumanSource_CB"
-        android:layout_width="252dp"
-        android:layout_height="90dp"
-        android:text="Source"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
 
     <TextView
         android:id="@+id/teleop_Human_TB"
@@ -290,43 +264,37 @@
 
     <RadioGroup
         android:id="@+id/Tele_Human_RG"
-        android:layout_width="400dp"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
+        android:layout_width="386dp"
+        android:layout_height="371dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761">
+        app:layout_constraintVertical_bias="1.0">
 
         <RadioButton
-            android:id="@+id/teleop_HumanYes_RB"
-            android:layout_width="200dp"
+            android:id="@+id/teleop_HumanYesAmp_RB"
+            android:layout_width="match_parent"
             android:layout_height="75dp"
-            android:layout_weight="1"
-            android:text="Yes"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.131"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.76" />
+            android:text="Yes, at the amp"
+            android:textSize="36sp" />
+
+        <RadioButton
+            android:id="@+id/teleop_HumanYesSource_RB"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Yes, at the source"
+            android:textSize="36sp" />
 
         <RadioButton
             android:id="@+id/teleop_HumanNo_RB"
             android:layout_width="200dp"
             android:layout_height="75dp"
             android:text="No"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.465"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.761" />
-        />
+            android:textSize="36sp" />
 
     </RadioGroup>
+
 </android.support.constraint.ConstraintLayout>
