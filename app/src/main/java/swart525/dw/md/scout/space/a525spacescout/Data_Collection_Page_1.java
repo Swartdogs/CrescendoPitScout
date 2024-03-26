@@ -122,6 +122,14 @@ public class Data_Collection_Page_1 extends AppCompatActivity {
                 }
                 if (GenOtherRB.isChecked()) {
                     GenOther = "True";
+                    if (GenOtherTXT.getText().toString().isEmpty()) {
+                        Toast.makeText(Data_Collection_Page_1.this, "Cannot Continue. Please Enter Drive Base Type!", Toast.LENGTH_LONG).show();
+                    } else {
+                        GenOtherResponse = GenOtherTXT.getText().toString();
+
+                        Intent startintent = new Intent(getApplicationContext(), data_Collection_sandstorm.class);
+                        startActivity(startintent);
+                    }
                 }
 
                 if (GenSourceCB.isChecked()) {
